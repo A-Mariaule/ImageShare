@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        @vite('resources/css/app.css')
-        <title>Create</title>
-    </head>
-    <body class="bg-gray-100">
+<x-app-layout>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">            
             <form action="/image/create" method="POST" enctype="multipart/form-data" class="max-w-md mx-auto bg-white shadow-lg rounded px-8 py-6">
                 <h1 class="text-4xl font-bold text-center mt-4">Create</h1>
@@ -25,5 +16,4 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
-    </body>
-</html>
+</x-app-layout>
