@@ -15,9 +15,7 @@ use App\Http\Controllers\ImageController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[ImageController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -30,6 +28,10 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/profile/{id}',[ProfileController::class, 'show'])->name('profile.show');
+
+
 
 //routes images
 

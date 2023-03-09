@@ -14,9 +14,17 @@
             <p class="mt-2">{{ $image->description}}</p>
             @foreach($users as $user)
                 @if($image->user_id==$user->id)
-                    <p class="mt-1">{{ $image->user->username}}</p>
+                   <a href="../../profile/{{$user->id}}" ><p class="mt-1">{{ $image->user->username}}</p></a>
                 @endif
             @endforeach
+            @auth
+            <a href="/image/edit/{{$image->id}}" class="mt-2">Edit</a>
+            <form action="/image/destroy/{{$image->id}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="Delete">
+            </form>
+            @endauth
         </div>
     </main>
 </body>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Image ;
 use App\Http\Requests\CreateImageRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\File;
 
 class ImageController extends Controller
 {
@@ -85,6 +86,7 @@ class ImageController extends Controller
     public function destroy(string $id)
     {
         $image = Image::find($id);
+        File::delete(public_path($image->image));
         $image->delete();
         return redirect()->route('images.index');
     }
