@@ -1,4 +1,4 @@
-<div class="flex items-center" x-data="picturePreview()">
+<div class="flex items-center mt-4" x-data="picturePreview()">
     <div class="rounded-md bg-gray-200 mr-2">
         <img id="preview" src="" alt="" class="w-24 h-24 rounded-md object-cover" >
     </div>
