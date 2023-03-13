@@ -66,15 +66,15 @@ class ImageController extends Controller
      */
     public function update(CreateImageRequest $request, string $id)
     {
-        $path = null;
+        /*$path = null;
         if($request->hasFile('image')){
             $path = $request->file('image')->storePublicly('liste_images');
-        }
+        }*/
         $image = Image::find($id);
         $image->title = $request->title;
         $image->description = $request->description;
         $image->user_id = $request->user_id;
-        $image->image = $path;
+        //$image->image = $path;
         $image->save();
 
         return redirect()->route('images.index');
