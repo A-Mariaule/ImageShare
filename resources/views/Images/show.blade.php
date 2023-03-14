@@ -1,6 +1,6 @@
 <x-app-layout>
-    <main class="p-24">
-        <div class="max-w-md mx-auto bg-white rounded-md shadow-md p-6">
+    <main class="p-4 md:p-24">
+        <div class="max-w-md m-auto bg-white rounded-md shadow-md p-6">
             <h2 class="text-xl font-semibold">{{ $image->title }}</h2>
             <img src="{{ asset($image->image) }}" alt="" class="my-4">
             <p class="text-gray-600">{{ $image->description}}</p>
@@ -15,7 +15,7 @@
                     <button  class='inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150'>
                         <a href="../edit/{{$image->id}}" class="">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"/>
                             </svg>
                         </a>
                     </button>
